@@ -98,7 +98,7 @@ This project is a **fully-featured automotive dashboard simulator** that demonst
 
 <div align="center">
 
-![Demo GIF](https://via.placeholder.com/600x400/1a1a1a/00ff00?text=Add+your+demo.gif+here)
+![Demo GIF](demo/dashDemo.gif)
 
 *Dashboard in action: Acceleration, turn signals, and warning indicators*
 

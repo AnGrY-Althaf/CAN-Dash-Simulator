@@ -9,7 +9,7 @@
 [![CAN Protocol](https://img.shields.io/badge/protocol-SocketCAN-orange.svg)](https://en.wikipedia.org/wiki/SocketCAN)
 [![Platform](https://img.shields.io/badge/platform-Linux-lightgrey.svg)](https://www.linux.org/)
 
-![Dashboard Preview](https://via.placeholder.com/800x400/1a1a1a/ffffff?text=Dashboard+Preview+Image)
+![Dashboard Preview](demo/dash.png)
 
 *A professional-grade car dashboard featuring real-time gauges, CAN bus communication, and realistic vehicle physics*
 
@@ -701,62 +701,6 @@ cansend vcan0 100#64
 1. **Use keyboard controls** (recommended, works immediately)
 2. **Compile custom WSL2 kernel** with CAN support ([Guide](https://github.com/microsoft/WSL2-Linux-Kernel))
 3. **Use native Linux** via dual-boot or VM
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Whether it's bug fixes, new features, or documentation improvements.
-
-### How to Contribute
-
-1. **Fork the repository**
-   ```bash
-   git clone https://github.com/yourusername/Car-HACK.git
-   cd Car-HACK
-   ```
-
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-
-3. **Make your changes**
-   - Write clean, commented code
-   - Follow existing code style
-   - Test thoroughly
-
-4. **Commit your changes**
-   ```bash
-   git commit -m "Add amazing feature"
-   ```
-
-5. **Push to your fork**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-
-6. **Open a Pull Request**
-   - Describe your changes
-   - Reference any related issues
-
-### Areas for Contribution
-
-- 🎨 **UI/UX**: New gauge designs, themes, layouts
-- 📡 **CAN Protocol**: Support for additional CAN standards (CAN-FD, J1939, etc.)
-- 🔊 **Audio**: More realistic engine sounds, additional sound effects
-- 🧪 **Testing**: Unit tests, integration tests, test scenarios
-- 📚 **Documentation**: Tutorials, examples, translations
-- 🐛 **Bug Fixes**: Report and fix issues
-- ✨ **Features**: New indicators, animations, physics improvements
-
-### Code Style
-
-- Use descriptive variable names
-- Comment complex logic
-- Keep functions focused and small
-- Follow PEP 8 style guide
-
 ---
 
 ## 📄 License
@@ -784,73 +728,6 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 ```
 
 ---
-
-## 🙏 Acknowledgments
-
-- **SocketCAN**: Linux CAN bus implementation
-- **python-can**: Elegant Python CAN interface
-- **Tkinter**: Python's standard GUI toolkit
-- **Automotive Community**: For CAN protocol documentation and standards
-- **Open Source Contributors**: Everyone who has contributed to this project
-
-### Inspired By
-
-- Real automotive instrument clusters
-- CAN bus analysis tools
-- Vehicle simulation software
-- Automotive security research
-
----
-
-## 📞 Support & Community
-
-- **Issues**: [GitHub Issues](https://github.com/yourusername/Car-HACK/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/Car-HACK/discussions)
-- **Wiki**: [Project Wiki](https://github.com/yourusername/Car-HACK/wiki)
-
----
-
-## 🎓 Learning Resources
-
-Want to learn more about CAN bus and automotive systems?
-
-- [CAN Bus Explained (Video)](https://www.youtube.com/watch?v=FqLDpHsxvf8)
-- [SocketCAN Documentation](https://www.kernel.org/doc/html/latest/networking/can.html)
-- [python-can Documentation](https://python-can.readthedocs.io/)
-- [Automotive CAN Standards](https://www.iso.org/standard/63648.html)
-- [Vehicle Network Security](https://owasp.org/www-project-vehicle-security/)
-
----
-
-## 🚀 Future Roadmap
-
-- [ ] CAN-FD support (flexible data-rate)
-- [ ] J1939 protocol support (heavy-duty vehicles)
-- [ ] OBD-II integration
-- [ ] Real CAN hardware support (CANable, PCAN, etc.)
-- [ ] Data logging and replay
-- [ ] Multi-dashboard support
-- [ ] Web interface
-- [ ] Mobile app companion
-- [ ] 3D dashboard rendering
-- [ ] VR/AR support
-
----
-
-<div align="center">
-
-### ⭐ Star this repo if you find it useful!
-
-**Made with ❤️ for the automotive and CAN enthusiast community**
-
-[Report Bug](https://github.com/yourusername/Car-HACK/issues) • [Request Feature](https://github.com/yourusername/Car-HACK/issues) • [Documentation](https://github.com/yourusername/Car-HACK/wiki)
-
----
-
-**🚗 Start your engine now:**
-
-```bash
-git clone https://github.com/yourusername/Car-HACK.git && cd Car-HACK && python3 main-dash.py
 ```
 
 *Press `E` to start the engine, `↑` to accelerate, and enjoy the ride! 🏁*

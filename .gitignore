@@ -170,7 +170,6 @@ can_trace_*.txt
 # Screenshots/recordings
 screenshots/
 recordings/
-*.gif
 *.mp4
 
 # Custom configs (if you add them)

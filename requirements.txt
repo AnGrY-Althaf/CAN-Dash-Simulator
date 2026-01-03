@@ -1,0 +1,22 @@
+# Car-HACK Dashboard - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core dependencies (required)
+python-can>=4.0.0
+
+# Optional dependencies (for enhanced features)
+# Uncomment to enable audio support
+# pyaudio>=0.2.13
+# numpy>=1.20.0
+
+# Note: Tkinter usually comes with Python installation
+# If missing, install system package:
+#   Ubuntu/Debian: sudo apt install python3-tk
+#   Fedora: sudo dnf install python3-tkinter
+#   Arch: sudo pacman -S tk
+
+# CAN utilities (install via system package manager)
+# Ubuntu/Debian: sudo apt install can-utils
+# Fedora: sudo dnf install can-utils
+# Arch: sudo pacman -S can-utils
+

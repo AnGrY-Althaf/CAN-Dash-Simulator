@@ -1,0 +1,178 @@
+╔═══════════════════════════════════════════════════════════════════╗
+║           DASHBOARD KEYBOARD CONTROLS - WSL2 MODE                 ║
+║         (Works even without vcan0/CAN support)                    ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────┐
+│ 🚗 VEHICLE CONTROLS                                               │
+└───────────────────────────────────────────────────────────────────┘
+
+  E          Engine On/Off
+             • Toggles between idle (800 RPM) and off (0 RPM)
+             • Engine must be ON for acceleration
+
+  ↑ or W     Accelerate
+             • Increases throttle
+             • Speed and RPM will increase
+             • Works only when engine is ON
+
+  ↓          Brake
+             • Decreases speed
+             • RPM will drop with speed
+             • Useful for slowing down
+
+  G          Change Gear
+             • Cycles: P → R → N → D → P
+             • P = Park, R = Reverse, N = Neutral, D = Drive
+             • Shown in center of dashboard
+
+┌───────────────────────────────────────────────────────────────────┐
+│ 🚨 SIGNALS & LIGHTS                                               │
+└───────────────────────────────────────────────────────────────────┘
+
+  ←          Left Turn Signal
+             • Green arrow blinks on left side
+             • Press again to turn off
+             • Automatically cancels after lane change
+
+  →          Right Turn Signal
+             • Green arrow blinks on right side
+             • Press again to turn off
+             • Automatically cancels after lane change
+
+  H          Hazard Lights
+             • Both turn signals blink together
+             • Press again to turn off
+             • Used for emergency stops
+
+  B          High Beam
+             • Blue indicator on dashboard
+             • Toggle on/off
+             • Simulates headlight high beams
+
+┌───────────────────────────────────────────────────────────────────┐
+│ ⚠️  WARNINGS & INDICATORS                                         │
+└───────────────────────────────────────────────────────────────────┘
+
+  P          Parking Brake
+             • Red "P" indicator
+             • Toggle on/off
+             • Prevents accidental rolling
+
+  T          Seatbelt Warning
+             • Red seatbelt icon
+             • Toggle on/off
+             • Simulates buckle/unbuckle
+
+  D          Door Open/Close
+             • Red door icon
+             • Toggle on/off
+             • Simulates door ajar warning
+
+┌───────────────────────────────────────────────────────────────────┐
+│ 🎯 QUICK START GUIDE                                              │
+└───────────────────────────────────────────────────────────────────┘
+
+1. Start the dashboard:
+   python3 main-dash.py
+
+2. Click on the dashboard window to focus it
+
+3. Try this sequence:
+   E     → Turn engine on (should see 800 RPM)
+   G     → Change to Drive (D)
+   ↑↑↑   → Accelerate (hold or press multiple times)
+   ←     → Left turn signal
+   ↓↓    → Brake to slow down
+   E     → Turn engine off
+
+┌───────────────────────────────────────────────────────────────────┐
+│ 📊 WHAT YOU'LL SEE                                                │
+└───────────────────────────────────────────────────────────────────┘
+
+LEFT GAUGE (Speedometer):
+  • Speed in km/h (0-260)
+  • Digital display in center
+  • Color changes from blue → red at high speeds
+
+RIGHT GAUGE (Tachometer):
+  • Engine RPM (0-8000)
+  • Digital display in center
+  • Turns RED in redline zone (6500+ RPM)
+  • Color arc: Green → Yellow → Orange → Red
+
+CENTER DISPLAY:
+  • Gear indicator (P, R, N, D)
+  • Fuel level (bar at bottom)
+  • Temperature (bar at top)
+
+BOTTOM INDICATORS:
+  • Warning lights (engine, battery, seatbelt, etc.)
+  • Turn signals (green arrows)
+  • Various status indicators
+
+┌───────────────────────────────────────────────────────────────────┐
+│ 💡 TIPS & TRICKS                                                  │
+└───────────────────────────────────────────────────────────────────┘
+
+• Dashboard must be FOCUSED (clicked) to receive keypresses
+• Engine must be ON (press E) before you can accelerate
+• Hold ↑ for continuous acceleration
+• Speed decreases naturally when not accelerating
+• Try to hit redline: ↑↑↑↑↑ until RPM > 6500!
+• Fuel and temperature change gradually during driving
+• All changes are smooth and realistic
+
+┌───────────────────────────────────────────────────────────────────┐
+│ ❓ TROUBLESHOOTING                                                │
+└───────────────────────────────────────────────────────────────────┘
+
+Problem: Keys don't work
+→ Make sure dashboard window is focused (click on it)
+
+Problem: Can't accelerate
+→ Press E to turn engine on first
+
+Problem: Dashboard won't start
+→ Run: python3 test-setup.py
+→ Check for missing dependencies
+
+Problem: Want to use CAN commands (cansend/candump)
+→ See WSL2_SETUP.md for vcan0 setup
+→ Or use native Linux (not WSL)
+
+┌───────────────────────────────────────────────────────────────────┐
+│ 🔄 REALISTIC DRIVING SIMULATION                                   │
+└───────────────────────────────────────────────────────────────────┘
+
+The dashboard simulates real vehicle physics:
+
+• RPM increases faster at lower speeds
+• Acceleration decreases at high speeds
+• Engine temperature rises when driving
+• Fuel consumption increases with RPM
+• Speed has air resistance
+• Braking is progressive
+
+Try this realistic scenario:
+
+1. E → Start engine (idle at 800 RPM)
+2. G → Shift to Drive
+3. ↑ → Gradually accelerate to 100 km/h
+4. → → Right turn signal
+5. ↓ → Slow down for turn
+6. ↑ → Accelerate again
+7. ↓↓↓ → Brake to stop
+8. G → Back to Park
+9. E → Engine off
+
+═══════════════════════════════════════════════════════════════════
+
+📝 NOTE: If vcan0 is working, you can ALSO use CAN commands:
+         cansend vcan0 100#64    (set speed to 100 km/h)
+         cansend vcan0 101#28    (set RPM to 4000)
+         See CAN_ID_MAP.md for full CAN documentation
+
+🧪 TEST YOUR SETUP: python3 test-setup.py
+📖 WSL2 HELP:       Read WSL2_SETUP.md
+
